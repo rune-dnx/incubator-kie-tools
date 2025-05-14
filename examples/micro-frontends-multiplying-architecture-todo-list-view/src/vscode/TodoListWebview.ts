@@ -57,7 +57,7 @@ export class TodoListWebview {
 
     // The HTML of the Webview
     webviewPanel.webview.html = `<!DOCTYPE html>
-        <html lang="en">
+        <html lang="en" class=" pf-theme-dark">
         <head>
           <style>
             html, body, div#envelope-app {

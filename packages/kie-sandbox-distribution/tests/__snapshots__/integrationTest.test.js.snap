@@ -33,7 +33,7 @@ exports[`Test built images individually extended-services homepage 1`] = `
 
 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" pf-theme-dark">
   <head>
     <meta charset="utf-8" />
     <meta

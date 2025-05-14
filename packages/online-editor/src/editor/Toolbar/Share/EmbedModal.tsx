@@ -127,7 +127,7 @@ export function EmbedModal(props: {
 
   const getStandaloneEditorIframeSrcdoc = useCallback((contentScript: string, standaloneEditorLibraryUrl: string) => {
     return `<!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class=" pf-theme-dark">
     <head>
       <title></title>
       <style>
