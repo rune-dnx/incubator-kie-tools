@@ -23,7 +23,7 @@
 }
 
 .filter-expression-cell .bracket-sign-container {
-  background-color: var(--pf-global--palette--black-200);
+  /*background-color: var(--pf-global--palette--black-200);*/
   width: 20px;
   min-width: 20px;
   max-width: 20px;
@@ -32,6 +32,10 @@
   display: flex;
   align-content: center;
   align-items: center;
+  /*dx*/
+  background-color: var(--pf-global--palette--black-800);
+  color: var(--pf-global--palette--black-200);
+  /*dx*/
 }
 
 .bracket-sign {

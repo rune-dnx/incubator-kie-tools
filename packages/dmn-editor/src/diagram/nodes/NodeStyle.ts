@@ -53,14 +53,14 @@ export interface Color {
   opacity: number;
 }
 
-export const DEFAULT_NODE_RED_FILL = 255;
-export const DEFAULT_NODE_GREEN_FILL = 255;
-export const DEFAULT_NODE_BLUE_FILL = 255;
+export const DEFAULT_NODE_RED_FILL = 33;
+export const DEFAULT_NODE_GREEN_FILL = 36;
+export const DEFAULT_NODE_BLUE_FILL = 39;
 export const DEFAULT_NODE_OPACITY = 0.9;
 export const DEFAULT_NODE_FILL = `rgba(${DEFAULT_NODE_RED_FILL}, ${DEFAULT_NODE_GREEN_FILL}, ${DEFAULT_NODE_BLUE_FILL}, ${DEFAULT_NODE_OPACITY})`;
 export const DEFAULT_NODE_STROKE_WIDTH = 1.5;
-export const DEFAULT_NODE_STROKE_COLOR = "rgba(0, 0, 0, 1)";
-export const DEFAULT_FONT_COLOR = "rgba(0, 0, 0, 1)";
+export const DEFAULT_NODE_STROKE_COLOR = "rgba(248, 248, 255, 1)";
+export const DEFAULT_FONT_COLOR = "rgba(248, 248, 248, 1)";
 
 export function useNodeStyle(args: {
   dmnStyle?: Normalized<DMNDI15__DMNStyle>;

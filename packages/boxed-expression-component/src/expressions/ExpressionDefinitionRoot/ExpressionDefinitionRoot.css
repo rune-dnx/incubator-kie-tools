@@ -19,7 +19,7 @@
 
 .expression-container > .expression-container-box {
   display: inline-block;
-  border: 2px solid var(--pf-global--palette--black-300);
+  /*border: 2px solid var(--pf-global--palette--black-300);*/
   margin-top: 5px;
 }
 
@@ -27,11 +27,20 @@
   position: fixed;
   z-index: 10000;
   font-style: initial;
+  /*dx*/
+  border: 0.2px solid #666666;
+  background-color: #1e1f22 !important;
+}
+.pf-c-menu__item-main {
+  color: ghostwhite;
 }
 
 .expression-container .expression-container-box,
 .expression-container .expression-type {
   font-size: 14px;
   font-style: italic;
-  color: gray;
+  /*dx*/
+  /*color: gray;*/
+  color: #1e1f22;
+  /*dx*/
 }

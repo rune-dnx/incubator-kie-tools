@@ -29,11 +29,13 @@
  transform. In our case, the Popup uses transform: translate() to position. So we are manual position the
   suggest widget and its details just bellow the Textbox. */
 .feel-input-textbox .feel-input .suggest-widget {
-  top: 60px !important;
+  /*top: 60px !important;*/
+  top: 40px !important;
   left: 14px !important;
 }
 .feel-input-textbox .feel-input .suggest-details-container {
-  top: 60px !important;
+  /*top: 60px !important;*/
+  top: 40px !important;
   left: 430px !important;
 }
 

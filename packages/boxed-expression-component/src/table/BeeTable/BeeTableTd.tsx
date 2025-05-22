@@ -253,7 +253,7 @@ export function BeeTableTd<R extends object>({
         data-ouia-component-id={`expression-column-${columnIndex}`}
         style={{
           outline: "none",
-          minHeight: `60px`,
+          minHeight: `40px`,
           width: column.width ? resizingWidth?.value : "100%",
           minWidth: column.width ? resizingWidth?.value : "100%",
           maxWidth: column.width ? resizingWidth?.value : "100%",

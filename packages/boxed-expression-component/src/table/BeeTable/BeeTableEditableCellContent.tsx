@@ -26,7 +26,7 @@ import { useBoxedExpressionEditor } from "../../BoxedExpressionEditorContext";
 import "./BeeTableEditableCellContent.css";
 import { getOperatingSystem, OperatingSystem } from "@kie-tools-core/operating-system";
 
-const CELL_LINE_HEIGHT = 20;
+const CELL_LINE_HEIGHT = 18;
 
 const MONACO_OPTIONS: Monaco.editor.IStandaloneEditorConstructionOptions = {
   fixedOverflowWidgets: true,
@@ -208,7 +208,10 @@ export function BeeTableEditableCellContent({
         className={cssClass}
         onKeyDown={onKeyDown}
       >
-        <span className="editable-cell-value pf-u-text-break-word" dangerouslySetInnerHTML={{ __html: preview }} />
+        <span
+          className="editable-cell-value pf-u-text-break-word dx-col"
+          dangerouslySetInnerHTML={{ __html: preview }}
+        />
         <span data-ouia-component-id={"editable-cell-raw-value"} className={"editable-cell-raw-value"}>
           {value}
         </span>

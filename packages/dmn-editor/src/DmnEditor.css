@@ -26,6 +26,9 @@
 .kie-tools--dmn-editor--diagram-container {
   height: 100%;
   position: relative;
+  /*dx*/
+  background-color: #212427;
+  /*dx*/
 }
 
 .kie-dmn-editor--bee-container {
@@ -36,6 +39,9 @@
   overflow: auto;
   user-select: none;
   padding-left: 16px;
+  /*dx*/
+  background-color: #212427;
+  /*dx*/
 }
 /* (end) global */
 

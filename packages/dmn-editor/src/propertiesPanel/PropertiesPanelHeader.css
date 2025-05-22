@@ -27,8 +27,10 @@
 
 .kie-dmn-editor--properties-panel-header-fixed {
   position: fixed;
-  background: rgb(255, 255, 255, 60%);
-  backdrop-filter: blur(4px);
+  /*background: rgb(255, 255, 255, 60%);*/
+  background: none;
+  /*backdrop-filter: blur(4px);*/
+  /*dx*/
   top: 0px;
   padding-top: 20px;
   z-index: 5000;

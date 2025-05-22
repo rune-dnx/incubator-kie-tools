@@ -24,13 +24,16 @@
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
-  min-height: 62px; /* That's the default Literal expression height. 20px * 3 lines + 2px for border-top and border-bottom */
+  min-height: 33px; /* dx change - from 62 to 33 -----  That's the default Literal expression height. 20px * 3 lines + 2px for border-top and border-bottom */
   overflow: visible;
   transition: background-color 0.1s ease;
 }
 
 .expression-container .logic-type-selector.logic-type-not-present:hover {
-  background-color: #eff5f8;
+  /*background-color: #eff5f8;*/
+  /*dx*/
+  background-color: var(--pf-global--palette--black-700);
+  /*dx*/
 }
 
 .expression-container .logic-type-selector.logic-type-not-present {
@@ -50,10 +53,13 @@
 .expression-container .logic-type-selector.logic-type-selected .logic-type-selected-header {
   color: black;
   padding: 0 0 2px 8px;
+  /*
+  dx
   border-bottom: 1px solid var(--pf-global--palette--black-500);
   border-top: 1px solid var(--pf-global--palette--black-400);
   border-left: 1px solid var(--pf-global--palette--black-400);
   border-right: 1px solid var(--pf-global--palette--black-400);
+  */
   position: relative;
   font-size: 10px;
   width: 100%;

@@ -970,3 +970,10 @@ html {
 .boxed-expression-provider .pf-icon-zone:before {
   content: "";
 }
+/*dx*/
+:where(.pf-theme-dark) .pf-c-menu__list-item:hover {
+  --pf-c-menu__list-item--Color: var(--pf-c-menu__list-item--hover--Color, inherit);
+  /*dx*/
+  --pf-c-menu__list-item--hover--BackgroundColor: rgba(000, 000, 000, 0.8);
+  /*dx*/
+}

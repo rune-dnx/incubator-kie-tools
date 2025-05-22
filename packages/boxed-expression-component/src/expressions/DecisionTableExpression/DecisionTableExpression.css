@@ -19,17 +19,27 @@
 
 .expression-container .decision-table-expression table thead th.input,
 .expression-container .decision-table-expression table thead th.input .add-column-button {
-  background-color: #def3ff;
+  /*background-color: #def3ff;*/
+  /*dx*/
+  background-color: #1b2632;
+  font-size: 0.7rem;
+  /*dx*/
 }
 
 .expression-container .decision-table-expression table thead th.output,
 .expression-container .decision-table-expression table thead th.output .add-column-button {
-  background-color: #bee1f4;
+  /*background-color: #bee1f4;*/
+  background-color: #002244;
 }
 
 .expression-container .decision-table-expression table thead th.annotation,
 .expression-container .decision-table-expression table thead th.annotation .add-column-button {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
+  /*dx*/
+  background-color: #1e1f22;
+  border-left: 1px solid var(--pf-global--palette--black-700);
+  font-size: 0.8rem;
+  /*dx*/
 }
 
 /* FIXME: This is not working. See https://github.com/apache/incubator-kie-issues/issues/162 */

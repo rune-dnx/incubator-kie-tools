@@ -43,8 +43,8 @@ import { DC__Dimension } from "@kie-tools/dmn-marshaller/dist/schemas/dmn-1_2/ts
 import { generateUuid } from "@kie-tools/boxed-expression-component/dist/api";
 import { useSettings } from "../settings/DmnEditorSettingsContext";
 
-const DEFAULT_FILL_COLOR = { "@_blue": 255, "@_green": 255, "@_red": 255 };
-const DEFAULT_STROKE_COLOR = { "@_blue": 0, "@_green": 0, "@_red": 0 };
+const DEFAULT_FILL_COLOR = { "@_blue": 58, "@_green": 175, "@_red": 470 };
+const DEFAULT_STROKE_COLOR = { "@_blue": 155, "@_green": 10, "@_red": 188 };
 
 export function ShapeOptions({
   startExpanded,
