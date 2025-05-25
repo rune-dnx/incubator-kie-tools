@@ -27,6 +27,10 @@
   font-family: Menlo, monospace;
   font-size: 0.8em;
   padding: 4px;
+  /*dx*/
+  color: #666666;
+  text-align: center;
+  margin-left: 10px !important;
 }
 
 .expression-container .expression-variable-cell,

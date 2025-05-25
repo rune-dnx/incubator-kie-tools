@@ -959,7 +959,7 @@ export const DecisionServiceNode = React.memo(
             {...nodeDimensions}
             x={0}
             y={0}
-            strokeWidth={3}
+            strokeWidth={1}
             fillColor={shapeStyle.fillColor}
             strokeColor={shapeStyle.strokeColor}
             isReadOnly={settings.isReadOnly}

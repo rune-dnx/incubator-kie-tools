@@ -463,7 +463,7 @@ export function TextAnnotationNodeSvg(__props: NodeSvgProps & { showPlaceholder?
         transform={`translate(${x},${y})`}
       />
       {showPlaceholder && (
-        <text x={"20%"} y={"62.5%"} style={{ fontSize: "5em", fontWeight: "bold" }}>
+        <text x={"20%"} y={"62.5%"} style={{ fontSize: "5em", fontWeight: "bold", fill: DEFAULT_NODE_STROKE_COLOR }}>
           Text
         </text>
       )}

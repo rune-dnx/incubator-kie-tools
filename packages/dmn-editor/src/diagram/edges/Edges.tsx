@@ -44,7 +44,12 @@ export const InformationRequirementPath = React.memo(
     const { svgRef, ...props } = _props;
     return (
       <>
-        <path ref={svgRef} style={{ strokeWidth: 1, stroke: "black" }} markerEnd={"url(#closed-arrow)"} {...props} />
+        <path
+          ref={svgRef}
+          style={{ strokeWidth: 1, stroke: "whitesmoke" }}
+          markerEnd={"url(#closed-arrow)"}
+          {...props}
+        />
       </>
     );
   }
@@ -57,7 +62,7 @@ export const KnowledgeRequirementPath = React.memo(
       <>
         <path
           ref={svgRef}
-          style={{ strokeWidth: 1, stroke: "black", strokeDasharray: "5,5" }}
+          style={{ strokeWidth: 1, stroke: "whitesmoke", strokeDasharray: "5,5" }}
           markerEnd={"url(#open-arrow)"}
           {...props}
         />
@@ -77,7 +82,7 @@ export const AuthorityRequirementPath = React.memo(
       <>
         <path
           ref={svgRef}
-          style={{ strokeWidth: 1, stroke: "black", strokeDasharray: "5,5" }}
+          style={{ strokeWidth: 1, stroke: "whitesmoke", strokeDasharray: "5,5" }}
           markerEnd={center ? `url(#closed-circle-at-center)` : `url(#closed-circle-at-border)`}
           {...props}
         />
@@ -97,7 +102,7 @@ export const AssociationPath = React.memo(
           strokeWidth={strokeWidth}
           strokeLinecap="butt"
           strokeLinejoin="round"
-          style={{ stroke: "black", strokeDasharray: `${strokeWidth},10` }}
+          style={{ stroke: "whitesmoke", strokeDasharray: `${strokeWidth},10` }}
           {...props}
         />
       </>

@@ -19,8 +19,8 @@
 
 .expression-container .literal-expression {
   width: 100%;
-  color: var(--pf-global--Color--100);
-  background-color: var(--pf-global--BackgroundColor--100);
+  /*color: var(--pf-global--Color--100);*/
+  /*background-color: var(--pf-global--BackgroundColor--100);*/
   font-style: normal;
   text-align: center;
 }
@@ -43,7 +43,7 @@
   flex-wrap: wrap;
   position: relative;
   padding: 0.5em 0;
-  border: 1px solid var(--pf-global--palette--black-300);
+  /*border: 1px solid var(--pf-global--palette--black-300);*/
   background-color: #def3ff;
   color: black;
 }
@@ -62,11 +62,41 @@
 }
 
 .literal-expression .literal-expression-body-container .equals-sign {
-  border-right: 1px solid var(--pf-global--palette--black-300);
-  background-color: var(--pf-global--palette--black-200);
+  /*border-right: 1px solid var(--pf-global--palette--black-300);*/
+  /*background-color: var(--pf-global--palette--black-200);*/
   width: 20px;
   min-width: 20px;
   max-width: 20px;
-  color: var(--pf-global--palette--black-600);
+  /*color: var(--pf-global--palette--black-600);*/
   font-family: Menlo, monospace;
+  /*dx*/
+  /*background-color: #00a379;*/
+  color: var(--pf-global--palette--black-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*dx*/
 }
+/*dx*/
+.monaco-editor.no-user-select .line-content,
+.monaco-editor.no-user-select .view-line,
+.monaco-editor.no-user-select .view-lines {
+  /*background-color: black;*/
+  /*color: var(--pf-global--palette--black-100);*/
+}
+.view-line {
+  /*top:20px!important;*/
+  /*left:7px!important;*/
+}
+
+.view-line .mtk5 {
+  color: #e8bd5a !important;
+}
+.view-line .mtk1 {
+  color: #a3725a !important;
+}
+.view-line .mtkb {
+  color: purple !important;
+}
+
+/*dx*/
