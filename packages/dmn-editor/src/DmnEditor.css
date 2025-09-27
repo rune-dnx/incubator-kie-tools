@@ -20,12 +20,15 @@
 /* (begin) global */
 .kie-dmn-editor--root {
   height: 100%;
-  scrollbar-color: rgba(121, 121, 121, 0.4) #f1f1f1;
+  scrollbar-color: rgba(121, 121, 121, 0.4) #3d3d3d;
 }
 
 .kie-tools--dmn-editor--diagram-container {
   height: 100%;
   position: relative;
+  /*dx*/
+  background-color:;
+  /*dx*/
 }
 
 .kie-dmn-editor--bee-container {
@@ -36,6 +39,9 @@
   overflow: auto;
   user-select: none;
   padding-left: 16px;
+  /*dx*/
+  background-color: #212427;
+  /*dx*/
 }
 /* (end) global */
 
@@ -205,7 +211,7 @@
 .kie-dmn-editor--decision-service-node .kie-dmn-editor--decision-service-collapsed-button {
   border: 3px;
   border-style: solid;
-  border-color: black;
+  border-color: ghostwhite;
   font-weight: bold;
   position: absolute;
   width: 24px;
@@ -226,7 +232,7 @@
 .kie-dmn-editor--decision-service-node .kie-dmn-editor--decision-service-expanded-button {
   border: 3px;
   border-style: solid;
-  border-color: black;
+  border-color: ghostwhite;
   font-weight: bold;
   position: absolute;
   width: 24px;
@@ -301,8 +307,8 @@
 .kie-dmn-editor--drd-selector {
   padding: 3px 8px 3px 16px;
   border-radius: 999999px;
-  background: white;
-  border: 1px solid black;
+  background: #26292d;
+  border: 1px solid ghostwhite;
   display: flex;
   align-items: center;
 }
@@ -314,14 +320,14 @@
   min-width: 50px;
 }
 .kie-dmn-editor--drd-selector:hover {
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
   filter: brightness(95%);
 }
 .kie-dmn-editor--drd-selector button {
   border: 0;
   padding: 4px 16px;
   border-radius: 8px;
-  background: white;
+  background: #26292d;
 }
 .kie-dmn-editor--drd-selector button:hover {
   filter: brightness(95%);
@@ -335,7 +341,7 @@
   margin-right: 16px;
   border-radius: 12px;
   text-align: left;
-  background: white;
+  background: #26292d;
   border-radius: 8px;
   border: 0;
   max-width: 300px;
@@ -357,12 +363,14 @@
 
 .kie-dmn-editor--palette {
   width: 42px;
-  background: #fff;
-  border-radius: 40px;
-  border: 1px solid black;
+  /*dx*/
+  background: #26292d !important;
+  border-radius: 20px;
+  border: 1px solid 333333;
 }
 .kie-dmn-editor--palette:hover {
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  border: 1px solid #999999;
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
 }
 
 .kie-dmn-editor--palette.pulse {
@@ -370,6 +378,7 @@
 }
 
 @keyframes pulse {
+  /*
   0% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.3);
   }
@@ -381,6 +390,7 @@
   100% {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0);
   }
+    */
 }
 
 .kie-dmn-editor--palette-button {
@@ -392,9 +402,12 @@
   max-width: 40px;
   border-radius: 40px;
   border: 0;
-  background: white;
+  /*background: #26292d;*/
+  /*dx*/
+  background: #26292d !important;
 }
 .kie-dmn-editor--palette-button:hover {
+  background-color: #26292d;
   filter: brightness(95%);
   cursor: grab;
 }
@@ -408,12 +421,12 @@
 
 .kie-dmn-editor--properties-panel-toggle {
   width: 42px;
-  background: #fff;
+  background: #26292d;
   border-radius: 40px;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--properties-panel-toggle:hover {
-  box-shadow: -4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: -4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--properties-panel-toggle-button {
   margin: 0;
@@ -422,7 +435,7 @@
   max-width: 40px;
   border-radius: 40px;
   border: 0;
-  background: white;
+  background: #26292d;
 }
 .kie-dmn-editor--properties-panel-toggle-button:hover {
   filter: brightness(95%);
@@ -441,16 +454,18 @@
 /* (begin) autolayout panel toggle */
 .kie-dmn-editor--autolayout-panel-toggle {
   width: 42px;
-  background: #fff;
+  /*background: #26292d;*/
+  /*dx*/
+  background: #1e1f22;
   border-radius: 40px;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--autolayout-panel-toggle:not(:last-child) {
   margin-right: 16px;
 }
 
 .kie-dmn-editor--autolayout-panel-toggle:hover {
-  box-shadow: -4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: -4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--autolayout-panel-toggle-button {
   margin: 0;
@@ -459,7 +474,7 @@
   max-width: 40px;
   border-radius: 40px;
   border: 0;
-  background: white;
+  background: #26292d;
 }
 .kie-dmn-editor--autolayout-panel-toggle-button:hover {
   filter: brightness(95%);
@@ -478,16 +493,16 @@
 /* (begin) overlays panel toggle */
 .kie-dmn-editor--overlays-panel-toggle {
   width: 42px;
-  background: #fff;
+  background: #26292d;
   border-radius: 40px;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--overlays-panel-toggle:not(:last-child) {
   margin-right: 16px;
 }
 
 .kie-dmn-editor--overlays-panel-toggle:hover {
-  box-shadow: -4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: -4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--overlays-panel-toggle-button {
   margin: 0;
@@ -496,7 +511,7 @@
   max-width: 40px;
   border-radius: 40px;
   border: 0;
-  background: white;
+  background: #1e1f22 !important;
 }
 .kie-dmn-editor--overlays-panel-toggle-button:hover {
   filter: brightness(95%);
@@ -516,13 +531,13 @@
 .kie-dmn-editor--drg-panel-toggle {
   margin-right: 16px;
   width: 42px;
-  background: #fff;
+  background: #kie-dmn-editor--external-nodes-panel-toggle;
   border-radius: 40px;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--external-nodes-panel-toggle:hover,
 .kie-dmn-editor--drg-panel-toggle:hover {
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--external-nodes-panel-toggle-button,
 .kie-dmn-editor--drg-panel-toggle-button {
@@ -532,7 +547,7 @@
   max-width: 40px;
   border-radius: 40px;
   border: 0;
-  background: white;
+  background: #26292d;
 }
 .kie-dmn-editor--external-nodes-panel-toggle-button:hover,
 .kie-dmn-editor--drg-panel-toggle-button:hover {
@@ -551,7 +566,7 @@
   top: 0;
   left: 58px;
   overflow: auto;
-  box-shadow: 0px 5px 10px 0px lightgray;
+  /*box-shadow: 0px 5px 10px 0px lightgray;*/
   background: rgb(255, 255, 255, 90%);
   backdrop-filter: blur(4px);
   width: 400px;
@@ -559,9 +574,9 @@
 .kie-dmn-editor--external-nodes-panel-toggle {
   margin-right: 16px;
   width: 42px;
-  background: #fff;
+  background: #26292d;
   border-radius: 40px;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--external-nodes-panel-toggle-button svg {
   transform: scale(1, -1); /* Flip the 'migration icon' vertically, to point to the Diagram */
@@ -581,20 +596,20 @@
 .kie-dmn-editor--outgoing-stuff-node-panel > div {
   display: flex;
   margin: 0 0 4px 0;
-  background: #fff;
+  background: red;
   border-radius: 24px;
-  border: 1px solid black;
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  border: 1px solid ghostwhite;
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--outgoing-stuff-node-panel > div > div {
-  color: black;
+  color: ghostwhite;
   margin: 0;
   padding: 0;
   width: 34px;
   height: 34px;
   max-width: 34px;
   border-radius: 34px;
-  background: #fff;
+  background: #26292d;
   border: 0;
   cursor: pointer;
   display: flex;
@@ -619,7 +634,7 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   position: absolute;
   background: #0388ce;
   border-radius: 100%;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
   pointer-events: none;
   width: 20px;
   height: 20px;
@@ -631,7 +646,7 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   position: absolute;
   background: #0388ce;
   border-radius: 100%;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
   pointer-events: none;
   width: 14px;
   height: 14px;
@@ -712,8 +727,8 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   padding-left: 10px;
 }
 .kie-dmn-editor--data-type-node-panel > div {
-  border: 1.25px solid black;
-  background: white;
+  border: 1.25px solid ghostwhite;
+  background: #26292d;
   box-shadow: 5px 5px 2px 0px rgb(127 127 127);
 }
 .kie-dmn-editor--data-type-node-panel .pf-v5-c-select__menu.pf-m-static {
@@ -738,11 +753,11 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   border-radius: 999999px;
   position: absolute;
   bottom: -16px;
-  background: white;
-  color: black;
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  background: #26292d;
+  color: ghostwhite;
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--edit-expression-node-panel span > .pf-v5-c-label__content {
   font-size: 0.7rem;
@@ -772,16 +787,16 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   padding: 4px 5px;
   height: 19px;
   cursor: pointer;
-  background: white;
-  color: black;
+  background: #26292d;
+  color: ghostwhite;
   font-weight: bold;
-  box-shadow: 4px 4px 2px 0px rgb(127 127 127);
+  /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
 }
 .kie-dmn-editor--info-label div {
   border-radius: 999999px;
 }
 .kie-dmn-editor--info-label > .pf-v5-c-label__content::before {
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--info-label .pf-v5-c-label__text {
   line-height: 0;
@@ -797,14 +812,14 @@ the cursor is inside it. By making it adimensional, that never happens.  */
 /* back button on boxed expression */
 .kie-dmn-editor--boxed-expression-back {
   cursor: pointer;
-  background: white;
+  background: #26292d;
   margin-left: -1px;
   height: 40px;
   width: 160px;
   justify-content: center;
 }
 .kie-dmn-editor--boxed-expression-back > .pf-v5-c-label__content::before {
-  border: 1px solid black;
+  border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--boxed-expression-back:hover {
   filter: brightness(95%);
@@ -820,7 +835,7 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   pointer-events: none;
 }
 circle.kie-dmn-editor--diagram-edge-waypoint {
-  fill: black;
+  fill: ghostwhite;
   stroke-width: 8;
   stroke: #006ba4;
 }
@@ -1125,8 +1140,8 @@ th {
 /* controls */
 .react-flow__controls {
   border-radius: 20px;
-  border: 1px solid black;
-  background: white;
+  border: 1px solid ghostwhite;
+  background: #26292d;
   margin-bottom: 24px;
 }
 .react-flow__controls:hover {
