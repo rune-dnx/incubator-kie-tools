@@ -34,10 +34,10 @@
 /** Table Header rules */
 
 .expression-container .table-component table th {
-  min-height: 55px;
+  /*min-height: 55px;*/
   position: relative;
-  padding: 0.7em 0;
-  border-style: ridge;
+  /*padding: 0.7em 0;*/
+  /*border-style: ridge;*/
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -46,7 +46,8 @@
 
 .expression-container .table-component table th:not(.row-index-column) {
   text-align: center;
-  background-color: #def3ff;
+  /*dx*/
+  /*background-color: #def3ff;*/
 }
 
 .expression-container .table-component table th.fixed-column {
@@ -83,10 +84,11 @@
   height: 4em;
 }
 
+/* prevent border on context first table */
 .expression-container .table-component table thead th,
 .expression-container .table-component table tbody td {
-  border-top: 1px solid var(--pf-v5-global--palette--black-300);
-  border-left: 1px solid var(--pf-v5-global--palette--black-300);
+  /*border-top: 1px solid var(--pf-v5-global--palette--black-300);*/
+  /*border-left: 1px solid var(--pf-v5-global--palette--black-300);*/
   border-right: 0;
   border-bottom: 0;
   outline: none;
@@ -94,12 +96,14 @@
 
 .expression-container .table-component table thead th:last-child,
 .expression-container .table-component table tbody td:last-child {
-  border-right: 1px solid var(--pf-v5-global--palette--black-300);
+  /*dx*/
+  border-right: 1px solid var(--pf-v5-global--palette--black-600);
 }
 
 .expression-container .table-component table thead tr:last-child th,
 .expression-container .table-component table tbody tr:last-child td {
-  border-bottom: 1px solid var(--pf-v5-global--palette--black-300);
+  /*dx */
+  /*border-bottom: 1px solid var(--pf-v5-global--palette--black-300);*/
 }
 /* SELECTION */
 
@@ -191,6 +195,7 @@
 
 .expression-container .table-component table thead th.active:after,
 .expression-container .table-component table tbody td.active:after {
+  /*  dx
   position: absolute;
   top: -2px !important;
   left: -2px !important;
@@ -200,6 +205,7 @@
   z-index: 6 !important;
   border: 3px solid #438cb1 !important;
   border-radius: 3px !important;
+  */
 }
 
 /** Table Body rules */
@@ -423,3 +429,40 @@
   box-shadow: none;
   min-width: 210px;
 }
+/*dx*/
+:where(.pf-v5-theme-dark) .table-component table th:not(.row-index-column) {
+  /* background-color: #1B2632!important;*/
+}
+
+:where(.pf-v5-theme-dark) .expression-container .table-component table th.fixed-column {
+  color: var(--pf-v5-global--palette--orange-300);
+}
+
+/*dx*/
+:where(.pf-v5-theme-dark) .expression-container .table-component table tbody td.row-index-column-cell.selected {
+  background-color: #1e1f22 !important;
+  color: #ffffff;
+}
+
+:where(.pf-v5-theme-dark) .decision-table-expression .table-component table thead:first-child th {
+  border-top: 1px solid var(--pf-v5-global--palette--black-600);
+}
+:where(.pf-v5-theme-dark) .decision-table-expression .table-component table thead th,
+:where(.pf-v5-theme-dark) .decision-table-expression .table-component table tbody td,
+:where(.pf-v5-theme-dark) .relation-expression .table-component table tbody td {
+  border-top: 1px solid var(--pf-v5-global--palette--black-600) !important;
+  border-left: 1px solid var(--pf-v5-global--palette--black-600) !important;
+}
+
+:where(.pf-v5-theme-dark).decision-table-expression .table-component table thead th:last-child,
+:where(.pf-v5-theme-dark) .decision-table-expression .table-component table tbody td:last-child,
+:where(.pf-v5-theme-dark) .relation-expression .table-component table tbody td:last-child,
+:where(.pf-v5-theme-dark) .relation-expression .table-component table thead tr:last-child th:last-child {
+  border-right: 1px solid var(--pf-v5-global--palette--black-600);
+}
+:where(.pf-v5-theme-dark) .decision-table-expression .table-component table tbody tr:last-child td,
+:where(.pf-v5-theme-dark) .relation-expression .table-component table tbody tr:last-child td {
+  border-bottom: 1px solid var(--pf-v5-global--palette--black-600);
+}
+
+/*dx*/

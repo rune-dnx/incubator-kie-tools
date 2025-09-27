@@ -19,15 +19,24 @@
 
 .expression-container > .expression-container-box {
   display: inline-block;
-  border: 2px solid var(--pf-v5-global--palette--black-300);
+  /*border: 2px solid var(--pf-v5-global--palette--black-300);*/
   margin-top: 5px;
-  box-shadow: 0 20px 20px 0 lightgray;
-  border-radius: 8px;
+  /*box-shadow: 0 20px 20px 0 lightgray;*/
+  /* border-radius: 8px;*/
 }
 
-.expression-container .expression-container-box,
-.expression-container .expression-type {
-  font-size: 14px;
-  font-style: italic;
-  color: gray;
+.expression-container .context-menu-container {
+  position: fixed;
+  z-index: 10000;
+  font-style: initial;
+  /*dx*/
+  border: 0.2px solid #666666;
+  background-color: #1e1f22 !important;
+}
+.pf-c-menu__item-main {
+  color: ghostwhite;
+}
+
+.add-column-button {
+  color: ghostwhite;
 }

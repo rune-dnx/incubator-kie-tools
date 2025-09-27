@@ -87,7 +87,7 @@ export function BeeTableBody<R extends object>({
       const rowEvaluationHitsCount = evaluationHitsCountById ? evaluationHitsCountById?.get(rowKey) ?? 0 : undefined;
       const canDisplayEvaluationHitsCountRowOverlay =
         rowEvaluationHitsCount !== undefined && (supportsEvaluationHitsCount?.(row) ?? false);
-      const rowClassName = `${rowKey}${canDisplayEvaluationHitsCountRowOverlay && rowEvaluationHitsCount > 0 ? " evaluation-hits-count-row-overlay" : ""}`;
+      const rowClassName = `dx-row ${rowKey}${canDisplayEvaluationHitsCountRowOverlay && rowEvaluationHitsCount > 0 ? " evaluation-hits-count-row-overlay" : ""}`;
 
       let evaluationHitsCountBadgeColumnIndex = -1;
       const renderTr = () => (

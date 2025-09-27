@@ -63,8 +63,10 @@
   font-weight: 700;
   color: var(--pf-v5-global--palette--black-600);
   font-family: Menlo, monospace;
-  font-size: 0.8em;
-  white-space: pre !important;
+  font-size: 0.9em;
+  /*white-space: pre !important;*/
+  text-align: left;
+  padding-left: 0.5rem;
 }
 
 .expression-container .expression-info .expression-info-data-type {
@@ -72,4 +74,109 @@
   font-style: italic;
   font-size: smaller;
   color: #1b515f;
+}
+
+/*dx*/
+
+:where(.pf-v5-theme-dark) .expression-container > .expression-container-box {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 1px !important;
+}
+
+/*monaco editor # num */
+:where(.pf-v5-theme-dark) .mtk0 {
+  color: #ed05ed;
+}
+:where(.pf-v5-theme-dark) .mtk1 {
+  color: #c6c6c6 !important;
+}
+:where(.pf-v5-theme-dark) .mtk4 {
+  color: #dadada !important;
+}
+:where(.pf-v5-theme-dark) .mtk5 {
+  color: #ffd265 !important;
+}
+:where(.pf-v5-theme-dark) .mtk6 {
+  color: #dc9372 !important;
+}
+:where(.pf-v5-theme-dark) .mtkb {
+  color: #fda581 !important;
+}
+:where(.pf-v5-theme-dark) .mtk7 {
+  color: #50b3fa !important;
+  /*display: inline; background-color: #cccccc;*/
+  /*border-radius: 4px;*/
+  /*padding: 2px;*/
+}
+:where(.pf-v5-theme-dark) .mtk8 {
+  color: #e3e3e3 !important;
+}
+
+/*dx*/
+:where(.pf-v5-theme-dark) .expression-container .expression-info .expression-info-name {
+  font-weight: 700;
+  font-family: Menlo, monospace;
+
+  color: ghostwhite;
+}
+
+:where(.pf-v5-theme-dark) .expression-container .expression-info .expression-info-data-type {
+  font-style: italic;
+  font-size: smaller;
+  display: none;
+  position: fixed;
+  left: 35px;
+  bottom: 20px;
+}
+
+:where(.pf-v5-theme-dark) .expression-container .expression-info:hover .expression-info-data-type {
+  display: block !important;
+}
+
+:where(.pf-v5-theme-dark) .pf-c-dropdown__toggle.pf-m-plain:not(.pf-m-text) {
+  display: none !important;
+}
+:where(.pf-v5-theme-dark) .pf-v5-c-drawer__splitter::after {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+:where(.pf-v5-theme-dark) .expression-container .expression-container-box {
+  font-size: 14px;
+  font-style: italic;
+  /*color: gray;*/
+
+  /*background-color: #666;*/
+}
+:where(.pf-v5-theme-dark) .expression-container .decision-table-expression table thead th.annotation {
+  color: var(--pf-v5-global--Color--400);
+  font-size: 12px !important;
+  font-weight: lighter;
+}
+
+:where(.pf-v5-theme-dark) .expression-container .table-component table tbody tr td.row-index-column-cell {
+  color: var(--pf-v5-global--Color--400);
+}
+
+:where(.pf-v5-theme-dark) .expression-container .table-component table tbody tr td {
+  padding: 0;
+  border-style: solid;
+  color: var(--pf-v5-global--palette--black-500);
+  border-width: 0.2px;
+  text-align: center;
+  overflow: visible;
+  position: relative;
+}
+.logic-type-selected-header .pf-v5-c-dropdown {
+  display: none;
+}
+.logic-type-selected-header:hover .pf-v5-c-dropdown {
+  display: block;
+}
+
+.equals-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--pf-v5-global--palette--black-400);
 }

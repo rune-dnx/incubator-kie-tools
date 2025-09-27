@@ -250,17 +250,14 @@ export function BeeTableHeader<R extends object>({
                       isReadOnly={isReadOnly}
                     />
                   ) : (
-                    <p
-                      data-testid={"kie-tools--bee--expression-info-name"}
-                      className="expression-info-name pf-v5-u-text-truncate name"
-                    >
+                    <p data-testid={"kie-tools--bee--expression-info-name"} className="expression-info-name name">
                       {column.label}
                     </p>
                   )}
                   {column.dataType ? (
                     <p
                       data-testid={"kie-tools--bee--expression-info-data-type"}
-                      className="expression-info-data-type pf-v5-u-text-truncate data-type"
+                      className="expression-info-data-type  data-type"
                     >
                       ({column.dataType})
                     </p>
