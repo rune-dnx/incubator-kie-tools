@@ -27,7 +27,7 @@
   height: 100%;
   position: relative;
   /*dx*/
-  background-color:;
+  background-color: #08090a;
   /*dx*/
 }
 
@@ -47,13 +47,14 @@
 
 /* (begin) diagram empty state */
 .kie-dmn-editor--diagram-empty-state {
-  border: 1px solid lightgray;
+  border: 1px solid #666666;
   backdrop-filter: blur(4px);
-  background: rgb(255, 255, 255, 60%);
+  /*background: rgb(255, 255, 255, 60%);*/
+  background-color: #212427 !important;
   border-radius: 16px;
   padding: 16px;
   pointer-events: all;
-  box-shadow: 0 0 60px 20px #e1e1e1;
+  box-shadow: 0 0 6px 2px #333333;
 }
 /* (end) diagram empty state */
 
@@ -531,10 +532,11 @@
 .kie-dmn-editor--drg-panel-toggle {
   margin-right: 16px;
   width: 42px;
-  background: #kie-dmn-editor--external-nodes-panel-toggle;
+  background-color: #26292d !important;
   border-radius: 40px;
   border: 1px solid ghostwhite;
 }
+
 .kie-dmn-editor--external-nodes-panel-toggle:hover,
 .kie-dmn-editor--drg-panel-toggle:hover {
   /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/
@@ -596,7 +598,7 @@
 .kie-dmn-editor--outgoing-stuff-node-panel > div {
   display: flex;
   margin: 0 0 4px 0;
-  background: red;
+  background: #26292d;
   border-radius: 24px;
   border: 1px solid ghostwhite;
   /*box-shadow: 4px 4px 2px 0px rgb(127 127 127);*/

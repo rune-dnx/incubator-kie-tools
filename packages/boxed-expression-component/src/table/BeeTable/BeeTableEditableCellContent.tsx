@@ -27,7 +27,7 @@ import "./BeeTableEditableCellContent.css";
 import { getOperatingSystem, OperatingSystem } from "@kie-tools-core/operating-system";
 import { useBoxedExpressionEditorI18n } from "../../i18n";
 
-const CELL_LINE_HEIGHT = 20;
+const CELL_LINE_HEIGHT = 12;
 
 const MONACO_OPTIONS: Monaco.editor.IStandaloneEditorConstructionOptions = {
   fixedOverflowWidgets: true,
