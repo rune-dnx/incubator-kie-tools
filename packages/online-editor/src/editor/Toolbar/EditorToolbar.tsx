@@ -342,7 +342,7 @@ export function EditorToolbarWithWorkspace(
                             toggleIndicator={null}
                           >
                             <Label color="cyan" variant={"outline"}>
-                              &nbsp;{`New DMN Editor`}&nbsp;&nbsp;
+                              &nbsp;{`DNX Demo`}&nbsp;&nbsp;
                               <CaretDownIcon />
                             </Label>
                           </DropdownToggle>
