@@ -188,7 +188,6 @@ module.exports = function (config) {
     options.browsers = process.env.TEST_BROWSERS.split(",");
   } else {
     options.browsers.push("ChromeHeadlessNoSandbox");
-    options.browsers.push("FirefoxHeadless");
   }
 
   console.log("running with browsers:", options.browsers);
