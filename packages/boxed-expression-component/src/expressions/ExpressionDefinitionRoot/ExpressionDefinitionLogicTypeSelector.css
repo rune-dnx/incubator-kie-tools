@@ -37,11 +37,17 @@
   /*dx*/
 }
 
-.expression-container .logic-type-selector.logic-type-not-present {
+.logic-type-selector.logic-type-not-present {
   cursor: pointer;
   justify-content: center;
   min-width: 210px;
-  font-size: 1rem;
+  /*dx*/
+  color: var(--pf-v5-global--palette--black-600);
+  font-size: 0.8rem;
+}
+/*dx*/
+.logic-type-selector.logic-type-not-present:hover {
+  color: ghostwhite;
 }
 
 .expression-container .logic-type-selector.logic-type-selected {

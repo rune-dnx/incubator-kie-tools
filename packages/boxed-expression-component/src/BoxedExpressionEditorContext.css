@@ -22,7 +22,8 @@
 }
 
 .boxed-expression-provider {
-  background-color: var(--pf-v5-global--BackgroundColor--100);
+  /*dx*/
+  /*background-color: var(--pf-v5-global--BackgroundColor--100);*/
   font-family: var(--pf-v5-global--FontFamily--sans-serif);
   font-size: var(--pf-v5-global--FontSize--md);
   font-weight: var(--pf-v5-global--FontWeight--normal);
@@ -178,7 +179,7 @@
 :where(.pf-v5-theme-dark) .expression-container .table-component table tbody tr td {
   padding: 0;
   border-style: solid;
-  color: var(--pf-v5-global--palette--black-500);
+  color: var(--pf-v5-global--palette--black-600);
   border-width: 0.2px;
   text-align: center;
   overflow: visible;
@@ -196,4 +197,13 @@
   justify-content: center;
   align-items: center;
   color: var(--pf-v5-global--palette--black-400);
+}
+:where(.pf-v5-theme-dark) .conditional-expression .data-cell div div {
+  color: var(--pf-v5-global--palette--black-300);
+}
+:where(.pf-v5-theme-dark) .conditional-expression .data-cell {
+  border: none !important;
+}
+:where(.pf-v5-theme-dark) .expression-container-box .expression-container-box .literal-expression .data-cell {
+  border: none !important;
 }
