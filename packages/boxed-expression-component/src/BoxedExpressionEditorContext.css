@@ -89,13 +89,30 @@
   color: #ed05ed;
 }
 :where(.pf-v5-theme-dark) .mtk1 {
-  color: #c6c6c6 !important;
+  color: #9db4f5 !important;
 }
 :where(.pf-v5-theme-dark) .mtk4 {
   color: #dadada !important;
 }
+/* string */
 :where(.pf-v5-theme-dark) .mtk5 {
-  color: #ffd265 !important;
+  color: #666666 !important;
+  /*
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  width: 2%;
+  max-width: 25px;
+  overflow: hidden;
+  */
+  background-color: #333333;
+  font-size: 10px;
+  border-radius: 2px;
+  padding: 1px;
+}
+.editable-cell-raw-value .mtk5 {
+  display: block !important;
 }
 :where(.pf-v5-theme-dark) .mtk6 {
   color: #dc9372 !important;
@@ -110,7 +127,7 @@
   /*padding: 2px;*/
 }
 :where(.pf-v5-theme-dark) .mtk8 {
-  color: #e3e3e3 !important;
+  color: #e6e6e6 !important;
 }
 
 /*dx*/

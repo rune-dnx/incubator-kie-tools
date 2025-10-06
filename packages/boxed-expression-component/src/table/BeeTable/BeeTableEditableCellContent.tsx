@@ -206,7 +206,8 @@ export function BeeTableEditableCellContent({
       <div
         ref={editableCellRef}
         tabIndex={-1}
-        style={{ height: `${cellHeight}px`, outline: "none" }}
+        /* dx height: `${cellHeight}px`, */
+        style={{ outline: "none" }}
         className={cssClass}
         onKeyDown={onKeyDown}
       >

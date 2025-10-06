@@ -60,4 +60,16 @@
 
 .pf-c-card.pf-m-flat.kogito--editor__dmn-form-result__results-card-highlight {
   border: var(--pf-global--BorderWidth--md) solid var(--pf-global--BorderColor--200);
+  /* dx */
+  background-color: red;
+}
+.pf-v5-c-form__group-label {
+  font-size: 0.7rem;
+  color: #666666;
+}
+.pf-v5-c-form__group {
+  font-size: 0.7rem;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
 }

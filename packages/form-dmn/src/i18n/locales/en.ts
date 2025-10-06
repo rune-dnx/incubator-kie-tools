@@ -59,9 +59,9 @@ export const en: FormDmnI18n = {
   },
   result: {
     evaluation: {
-      succeeded: "Evaluation succeeded",
-      skipped: "Evaluation skipped",
-      failed: "Evaluation failed",
+      succeeded: "Succees",
+      skipped: "Skipped",
+      failed: "Failed",
     },
     error: {
       title: `${en_common.terms.oops}!`,
