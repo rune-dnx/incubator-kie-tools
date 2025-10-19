@@ -54,7 +54,9 @@
   border-radius: 16px;
   padding: 16px;
   pointer-events: all;
+  /*dx
   box-shadow: 0 0 6px 2px #333333;
+  */
 }
 /* (end) diagram empty state */
 
@@ -309,7 +311,8 @@
   padding: 3px 8px 3px 16px;
   border-radius: 999999px;
   background: #26292d;
-  border: 1px solid ghostwhite;
+  /*dx*/
+  border: none !important;
   display: flex;
   align-items: center;
 }
@@ -424,7 +427,8 @@
   width: 42px;
   background: #26292d;
   border-radius: 40px;
-  border: 1px solid ghostwhite;
+  /*dx*/
+  border: none !important;
 }
 .kie-dmn-editor--properties-panel-toggle:hover {
   /*box-shadow: -4px 4px 2px 0px rgb(127 127 127);*/
@@ -459,7 +463,7 @@
   /*dx*/
   background: #1e1f22;
   border-radius: 40px;
-  border: 1px solid ghostwhite;
+  border: none !important;
 }
 .kie-dmn-editor--autolayout-panel-toggle:not(:last-child) {
   margin-right: 16px;
@@ -496,7 +500,8 @@
   width: 42px;
   background: #26292d;
   border-radius: 40px;
-  border: 1px solid ghostwhite;
+  /*dx*/
+  border: none !important;
 }
 .kie-dmn-editor--overlays-panel-toggle:not(:last-child) {
   margin-right: 16px;
@@ -534,7 +539,8 @@
   width: 42px;
   background-color: #26292d !important;
   border-radius: 40px;
-  border: 1px solid ghostwhite;
+  /*dx*/
+  border: none !important;
 }
 
 .kie-dmn-editor--external-nodes-panel-toggle:hover,
@@ -570,7 +576,8 @@
   overflow: auto;
   /*box-shadow: 0px 5px 10px 0px lightgray;*/
   background: rgb(255, 255, 255, 90%);
-  backdrop-filter: blur(4px);
+  /*dx*/
+  /*backdrop-filter: blur(4px);*/
   width: 400px;
 }
 .kie-dmn-editor--external-nodes-panel-toggle {
@@ -578,7 +585,8 @@
   width: 42px;
   background: #26292d;
   border-radius: 40px;
-  border: 1px solid ghostwhite;
+  /*dx*/
+  border: none !important;
 }
 .kie-dmn-editor--external-nodes-panel-toggle-button svg {
   transform: scale(1, -1); /* Flip the 'migration icon' vertically, to point to the Diagram */
@@ -731,7 +739,9 @@ the cursor is inside it. By making it adimensional, that never happens.  */
 .kie-dmn-editor--data-type-node-panel > div {
   border: 1.25px solid ghostwhite;
   background: #26292d;
+  /*dx
   box-shadow: 5px 5px 2px 0px rgb(127 127 127);
+  */
 }
 .kie-dmn-editor--data-type-node-panel .pf-v5-c-select__menu.pf-m-static {
   text-align: left;
@@ -824,8 +834,10 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   border: 1px solid ghostwhite;
 }
 .kie-dmn-editor--boxed-expression-back:hover {
+  /*dx
   filter: brightness(95%);
   box-shadow: 2px 3px 2px 0px rgb(127 127 127);
+  */
 }
 .kie-dmn-editor--boxed-expression-back:active {
   filter: brightness(90%);
@@ -866,9 +878,12 @@ circle.kie-dmn-editor--diagram-edge-waypoint:hover {
   top: 0;
   left: 0;
   z-index: 9999;
-  background: rgb(255, 255, 255, 60%);
-  backdrop-filter: blur(4px);
-  border-bottom: 1px solid lightgray;
+  /*dx*/
+
+  background: none !important;
+  /*backdrop-filter: blur(4px);*/
+  border-bottom: 1px solid #3e3d3d;
+  /*dx*/
 }
 .kie-dmn-editor--boxed-expression-header {
   padding: 14px;
@@ -996,7 +1011,8 @@ th {
   overflow: hidden;
 }
 .kie-dmn-editor--data-type-properties-table tr {
-  border-bottom: 1px solid lightgray;
+  /*dx*/
+  border-bottom: 1px solid #434343 !important;
   position: relative;
 }
 /* Hover effect */
@@ -1050,7 +1066,9 @@ th {
   fill: #006ba4 !important;
   stroke: #006ba4 !important;
   stroke-width: 3px !important;
+  /*dx
   filter: drop-shadow(2px 2px 2px #006ba477);
+  */
 }
 .react-flow__edge.selected .react-flow__edge-interaction.normal {
   cursor: crosshair;
@@ -1069,7 +1087,9 @@ th {
 
 /* nodes selection / hover */
 .react-flow__node:not(.selected):hover > .kie-dmn-editor--node-shape.normal {
+  /*dx
   filter: drop-shadow(2px 2px 2px rgb(127, 127, 127));
+  */
 }
 .react-flow__node.selected {
   color: #006ba4 !important;
@@ -1096,7 +1116,9 @@ th {
 .react-flow__node > .kie-dmn-editor--node-shape.drop-target,
 .react-flow__node.selected > .kie-dmn-editor--node-shape.normal {
   border-color: #006ba4 !important;
+  /*dx
   filter: drop-shadow(2px 2px 2px #006ba477);
+  */
 }
 .react-flow__node > .kie-dmn-editor--node-shape.drop-target > * {
   stroke: #006ba4 !important;
@@ -1141,13 +1163,18 @@ th {
 
 /* controls */
 .react-flow__controls {
+  /*dx*/
+  display: none;
+
   border-radius: 20px;
   border: 1px solid ghostwhite;
   background: #26292d;
   margin-bottom: 24px;
 }
 .react-flow__controls:hover {
+  /*dx
   box-shadow: -4px -4px 2px 0px rgb(127 127 127);
+  */
 }
 .react-flow__controls > button {
   border-radius: 20px;
@@ -1223,3 +1250,44 @@ th {
   margin-top: 1px;
 }
 /*   ⬆ (end) pf4 overrides ⬆      */
+
+/*dx overrides*/
+
+.pf-v5-c-form-control > :is(input, select, textarea) {
+  background-color: #1e1f22 !important;
+  border-color: #3e3d3d !important;
+  color: ghostwhite !important;
+}
+.pf-v5-c-button.pf-m-plain {
+  background-color: #1b1d21!;
+}
+.pf-v5-c-select__toggle .pf-v5-c-select__toggle-button {
+  display: none !important;
+  background-color: #1e1f22 !important;
+  border-color: none !important;
+  color: ghostwhite !important;
+}
+.pf-v5-c-button .pf-v5-c-select__toggle-button .pf-m-plain {
+  background-color: #1e1f22 !important;
+  border: none !important;
+}
+.kie-dmn-editor--data-type-properties-table .pf-m-typeahead {
+  background: --pf-v5-global--BackgroundColor--100;
+  color: ghostwhite !important;
+}
+.pf-v5-c-button.pf-m-control {
+  background-color: #1e1f22 !important;
+}
+.kie-dmn-editor--properties-panel-header-fixed {
+  background: none !important;
+}
+.react-flow__attribution {
+  background: none !important;
+}
+
+.kie-dmn-editor--data-type-properties-table .pf-m-typeahead {
+  background-color: #1e1f22 !important;
+}
+.pf-v5-c-select__toggle::before {
+  border: none !important;
+}

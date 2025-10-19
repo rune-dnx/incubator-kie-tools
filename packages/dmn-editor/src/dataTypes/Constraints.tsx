@@ -761,10 +761,12 @@ export function Constraints({
       isConstraintEnabled.range === false ? (
         <p
           style={{
-            padding: "10px",
-            background: "#eee",
+            padding: "14px",
+            background: "#333",
+            color: "#999999",
             borderRadius: "10px",
             textAlign: "center",
+            border: "1px solid #555",
           }}
         >
           {i18n.dataTypes.dataTypeConstraints}
@@ -851,9 +853,11 @@ export function Constraints({
               <p
                 style={{
                   padding: "24px",
-                  background: "#eee",
+                  background: "#333",
+                  color: "ghostwhite",
                   borderRadius: "10px",
                   textAlign: "center",
+                  border: "1px solid #555",
                 }}
               >
                 {i18n.dataTypes.allValuesAllowed}
