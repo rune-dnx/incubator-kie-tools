@@ -28,7 +28,7 @@ module.exports = composeEnv([rootEnv], {
       description: "E.g., `docker.io` or `quay.io`.",
     },
     KIE_SANDBOX_WEBAPP_IMAGE__imageAccount: {
-      default: "apache",
+      default: "runelovik",
       description: "E.g,. `apache` or `kie-tools-bot`",
     },
     KIE_SANDBOX_WEBAPP_IMAGE__imageName: {
