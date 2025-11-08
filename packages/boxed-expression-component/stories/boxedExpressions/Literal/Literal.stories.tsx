@@ -73,6 +73,7 @@ export const CanDrive: Story = {
       "@_label": "Can Drive?",
       "@_typeRef": DmnBuiltInDataType.Boolean,
       text: { __$$text: "Age >= 18 then true else false" },
+      description: { __$$text: "xxxx-xxxx-xxxx" },
     },
     widthsById: {
       "_D98FB35A-C6A5-4BA7-AD38-176D56A31872": [500],
