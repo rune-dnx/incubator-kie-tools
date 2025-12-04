@@ -13,14 +13,13 @@
       { "id": "@kie-tools/tsconfig" },
       { "id": "@kie-tools-examples/bpmn-editor-classic-on-webapp" },
       { "id": "@kie-tools-core/react-hooks" },
+      { "id": "@kie-tools-core/webpack-base" },
       { "id": "@kie-tools/kie-bc-editors" },
-      { "id": "@kie-tools/stunner-editors" },
       { "id": "@kie-tools/eslint" },
       { "id": "@kie-tools/root-env" },
       { "id": "@kie-tools/dmn-language-service" },
       { "id": "@kie-tools/kie-bc-editors-common" },
       { "id": "@kie-tools/pmml-editor-marshaller" },
-      { "id": "@kie-tools/stunner-editors-dmn-loader" },
       { "id": "@kie-tools-examples/dmn-editor-classic-on-webapp" },
       { "id": "@kie-tools-examples/dmn-editor-on-webapp" },
       { "id": "@kie-tools/dmn-editor-envelope" },
@@ -42,7 +41,6 @@
         "id": "@kie-tools-examples/micro-frontends-multiplying-architecture-base64png-editor-chrome-extension"
       },
       { "id": "@kie-tools-core/chrome-extension" },
-      { "id": "@kie-tools-core/webpack-base" },
       {
         "id": "@kie-tools-examples/micro-frontends-multiplying-architecture-base64png-editor-on-webapp"
       },
@@ -243,6 +241,7 @@
       { "id": "@kie-tools/sonataflow-management-console-image" },
       { "id": "@kie-tools/sonataflow-management-console-image-env" },
       { "id": "@kie-tools/sonataflow-management-console-webapp" },
+      { "id": "@kie-tools/stunner-editors-dmn-loader" },
       { "id": "vscode-extension-dashbuilder-editor" },
       { "id": "vscode-extension-kie-ba-bundle" },
       { "id": "vscode-extension-kogito-bundle" },
@@ -308,12 +307,12 @@
       },
       {
         "source": "@kie-tools-examples/bpmn-editor-classic-on-webapp",
-        "target": "@kie-tools/kie-bc-editors",
+        "target": "@kie-tools-core/webpack-base",
         "weight": 1
       },
       {
         "source": "@kie-tools-examples/bpmn-editor-classic-on-webapp",
-        "target": "@kie-tools/stunner-editors",
+        "target": "@kie-tools/kie-bc-editors",
         "weight": 1
       },
       {
@@ -332,6 +331,11 @@
         "weight": 1
       },
       {
+        "source": "@kie-tools-core/webpack-base",
+        "target": "@kie-tools/root-env",
+        "weight": 1
+      },
+      {
         "source": "@kie-tools/kie-bc-editors",
         "target": "@kie-tools/dmn-language-service",
         "weight": 1
@@ -344,11 +348,6 @@
       {
         "source": "@kie-tools/kie-bc-editors",
         "target": "@kie-tools/pmml-editor-marshaller",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/stunner-editors",
-        "target": "@kie-tools/stunner-editors-dmn-loader",
         "weight": 1
       },
       {
@@ -387,28 +386,18 @@
         "weight": 1
       },
       {
-        "source": "@kie-tools/stunner-editors-dmn-loader",
-        "target": "@kie-tools/boxed-expression-component",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/stunner-editors-dmn-loader",
-        "target": "@kie-tools/import-java-classes-component",
-        "weight": 1
-      },
-      {
         "source": "@kie-tools-examples/dmn-editor-classic-on-webapp",
         "target": "@kie-tools-core/react-hooks",
         "weight": 1
       },
       {
         "source": "@kie-tools-examples/dmn-editor-classic-on-webapp",
-        "target": "@kie-tools/kie-bc-editors",
+        "target": "@kie-tools-core/webpack-base",
         "weight": 1
       },
       {
         "source": "@kie-tools-examples/dmn-editor-classic-on-webapp",
-        "target": "@kie-tools/stunner-editors",
+        "target": "@kie-tools/kie-bc-editors",
         "weight": 1
       },
       {
@@ -534,11 +523,6 @@
       {
         "source": "@kie-tools-core/chrome-extension",
         "target": "@kie-tools-core/editor",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools-core/webpack-base",
-        "target": "@kie-tools/root-env",
         "weight": 1
       },
       {
@@ -1028,11 +1012,6 @@
       },
       {
         "source": "bpmn-vscode-extension",
-        "target": "@kie-tools/stunner-editors",
-        "weight": 1
-      },
-      {
-        "source": "bpmn-vscode-extension",
         "target": "@kie-tools/vscode-java-code-completion-extension-plugin",
         "weight": 1
       },
@@ -1073,12 +1052,12 @@
       },
       {
         "source": "chrome-extension-pack-kogito-kie-editors",
-        "target": "@kie-tools/chrome-extension-test-helper",
+        "target": "@kie-tools-core/webpack-base",
         "weight": 1
       },
       {
         "source": "chrome-extension-pack-kogito-kie-editors",
-        "target": "@kie-tools/stunner-editors",
+        "target": "@kie-tools/chrome-extension-test-helper",
         "weight": 1
       },
       {
@@ -1723,11 +1702,6 @@
       },
       {
         "source": "dmn-vscode-extension",
-        "target": "@kie-tools/stunner-editors",
-        "weight": 1
-      },
-      {
-        "source": "dmn-vscode-extension",
         "target": "@kie-tools/vscode-java-code-completion-extension-plugin",
         "weight": 1
       },
@@ -1858,11 +1832,6 @@
       },
       {
         "source": "kie-editors-dev-vscode-extension",
-        "target": "@kie-tools/stunner-editors",
-        "weight": 1
-      },
-      {
-        "source": "kie-editors-dev-vscode-extension",
         "target": "@kie-tools/vscode-extension-common-test-helpers",
         "weight": 1
       },
@@ -1893,12 +1862,12 @@
       },
       {
         "source": "@kie-tools/kie-editors-standalone",
-        "target": "@kie-tools/kie-bc-editors",
+        "target": "@kie-tools-core/webpack-base",
         "weight": 1
       },
       {
         "source": "@kie-tools/kie-editors-standalone",
-        "target": "@kie-tools/stunner-editors",
+        "target": "@kie-tools/kie-bc-editors",
         "weight": 1
       },
       {
@@ -2004,11 +1973,6 @@
       {
         "source": "@kie-tools/online-editor",
         "target": "@kie-tools/kie-sandbox-accelerator-quarkus",
-        "weight": 1
-      },
-      {
-        "source": "@kie-tools/online-editor",
-        "target": "@kie-tools/stunner-editors",
         "weight": 1
       },
       {
@@ -2687,6 +2651,16 @@
         "weight": 1
       },
       {
+        "source": "@kie-tools/stunner-editors-dmn-loader",
+        "target": "@kie-tools/boxed-expression-component",
+        "weight": 1
+      },
+      {
+        "source": "@kie-tools/stunner-editors-dmn-loader",
+        "target": "@kie-tools/import-java-classes-component",
+        "weight": 1
+      },
+      {
         "source": "vscode-extension-dashbuilder-editor",
         "target": "@kie-tools-core/vscode-extension",
         "weight": 1
@@ -3012,7 +2986,6 @@
     ["@kie-tools/sonataflow-quarkus-devui", "packages/sonataflow-quarkus-devui"],
     ["@kie-tools/sonataflow-uniforms", "packages/sonataflow-uniforms"],
     ["@kie-tools/storybook-base", "packages/storybook-base"],
-    ["@kie-tools/stunner-editors", "packages/stunner-editors"],
     ["@kie-tools/stunner-editors-dmn-loader", "packages/stunner-editors-dmn-loader"],
     ["@kie-tools-core/switch-expression-ts", "packages/switch-expression-ts"],
     ["@kie-tools/text-editor", "packages/text-editor"],

@@ -834,7 +834,7 @@ the cursor is inside it. By making it adimensional, that never happens.  */
   justify-content: center;
 }
 .kie-dmn-editor--boxed-expression-back > .pf-v5-c-label__content::before {
-  border: 1px solid ghostwhite;
+  border: none !important;
 }
 .kie-dmn-editor--boxed-expression-back:hover {
   /*dx
@@ -952,7 +952,7 @@ circle.kie-dmn-editor--diagram-edge-waypoint:hover {
   display: flex;
   align-items: baseline;
   padding: 0 16px;
-  margin: 8px 0;
+  margin: 2px 0;
   margin-right: 16px;
   border-radius: 12px;
   cursor: pointer;
@@ -1007,7 +1007,7 @@ circle.kie-dmn-editor--diagram-edge-waypoint:hover {
 }
 .kie-dmn-editor--data-type-properties-table td,
 th {
-  padding: 12px;
+  padding: 2px !important;
 }
 .kie-dmn-editor--data-type-properties-table {
   position: relative;
