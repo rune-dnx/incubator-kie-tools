@@ -16,7 +16,9 @@
  * specific language governing permissions and limitations
  * under the License. 
  */
-
+body {
+  background-color: #1a1919;
+}
 .pf-v5-c-page__header {
   /* this adjusts the max specifically for our logo */
   --pf-v5-c-page__header-brand-link--c-brand--MaxHeight: 39px;
@@ -211,14 +213,15 @@
 
 .kogito--editor__toolbar-title {
   background-color: var(--pf-v5-c-page__main-section--m-light--BackgroundColor);
-  border: var(--pf-v5-global--BorderWidth--md) solid var(--pf-v5-global--BorderColor--200);
-  font-size: var(--pf-v5-global--FontSize--2xl);
+  /*border: var(--pf-v5-global--BorderWidth--md) solid var(--pf-v5-global--BorderColor--200);*/
+  /*font-size: var(--pf-v5-global--FontSize--2xl);*/
+  padding-top: 0.6rem !important;
   text-align: center;
 }
 
 .kogito--editor__toolbar-title:focus {
   background-color: var(--pf-v5-c-form-control--BackgroundColor);
-  color: var(--pf-v5-global--Color--100);
+  /*color: var(--pf-v5-global--Color--100);*/
 }
 
 .kogito--editor__toolbar-title h3 {
@@ -630,7 +633,7 @@ section.kie-tools--settings-tab {
 
 .kie-tools--masthead-hoverable:hover,
 .kie-tools--masthead-hoverable > .pf-v5-c-select__toggle:hover {
-  background-color: rgb(235, 235, 235);
+  /*background-color: rgb(235, 235, 235);*/
   border-radius: 8px;
 }
 
@@ -782,4 +785,34 @@ section.kie-tools--settings-tab {
 .kie-sandbox--copy-command-block input {
   font-family: var(--pf-v5-global--FontFamily--monospace);
   font-size: revert;
+}
+/*dx*/
+
+.pf-v5-c-dropdown__toggle {
+  padding-left: 1rem;
+  border-radius: 1.3rem;
+  background-color: var(--pf-v5-c-page__main-nav--BackgroundColor);
+}
+.pf-m-plain {
+  padding-left: 1rem;
+  border-radius: 1.3rem;
+  background-color: var(--pf-v5-c-page__main-nav--BackgroundColor);
+}
+
+:where(.pf-v5-theme-dark) .pf-v5-c-dropdown {
+  --pf-v5-c-dropdown__toggle--before--BorderWidth: none;
+}
+
+.pf-v5-c-dropdown__toggle .pf-m-plain {
+  color: ghostwhite;
+}
+
+.pf-v5-c-tabs.pf-m-fill .pf-v5-c-tabs__list {
+  flex-basis: 35% !important;
+}
+.footer-icons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.5rem;
 }

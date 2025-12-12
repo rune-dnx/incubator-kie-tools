@@ -279,12 +279,6 @@ export function FileSwitcher(props: {
                   gap={{ default: "gapMd" }}
                 >
                   <FlexItem />
-                  <FlexItem>
-                    <b>
-                      <FileLabel extension={props.workspaceFile.extension} />
-                    </b>
-                  </FlexItem>
-
                   <FlexItem style={{ minWidth: 0 }}>
                     <Popover
                       hasAutoWidth={true}
@@ -349,7 +343,7 @@ export function FileSwitcher(props: {
                     </Popover>
                   </FlexItem>
                   <FlexItem>
-                    <CaretDownIcon color={"rgb(21, 21, 21)"} />
+                    <CaretDownIcon color={"rgb(255, 255, 255)"} />
                   </FlexItem>
                 </Flex>
               </Toggle>

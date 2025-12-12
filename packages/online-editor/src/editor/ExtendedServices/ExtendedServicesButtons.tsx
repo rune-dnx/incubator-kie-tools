@@ -110,22 +110,22 @@ export function ExtendedServicesButtons(props: Props) {
 
   return (
     <>
-      <Dropdown
-        className={"pf-m-active"}
-        onSelect={() => devDeployments.setDeployDropdownOpen(false)}
-        toggle={
-          <DropdownToggle
-            id="dmn-dev-deployment-dropdown-button"
-            onToggle={toggleDevDeploymentsDropdown}
-            data-testid="dmn-dev-deployment-button"
-          >
-            Deploy
-          </DropdownToggle>
-        }
-        isOpen={devDeployments.isDeployDropdownOpen}
-        position={DropdownPosition.right}
-        dropdownItems={devDeploymentsDropdownItems}
-      />
+      {/*<Dropdown*/}
+      {/*  className={"pf-m-active"}*/}
+      {/*  onSelect={() => devDeployments.setDeployDropdownOpen(false)}*/}
+      {/*  toggle={*/}
+      {/*    <DropdownToggle*/}
+      {/*      id="dmn-dev-deployment-dropdown-button"*/}
+      {/*      onToggle={toggleDevDeploymentsDropdown}*/}
+      {/*      data-testid="dmn-dev-deployment-button"*/}
+      {/*    >*/}
+      {/*      Deploy*/}
+      {/*    </DropdownToggle>*/}
+      {/*  }*/}
+      {/*  isOpen={devDeployments.isDeployDropdownOpen}*/}
+      {/*  position={DropdownPosition.right}*/}
+      {/*  dropdownItems={devDeploymentsDropdownItems}*/}
+      {/*/>*/}
       {"  "}
       {props.workspaceFile.extension === "dmn" && (
         <>

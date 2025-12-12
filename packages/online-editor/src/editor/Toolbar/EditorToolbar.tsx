@@ -27,6 +27,7 @@ import {
   ToolbarItemProps,
 } from "@patternfly/react-core/dist/js/components/Toolbar";
 import { SaveIcon } from "@patternfly/react-icons/dist/js/icons/save-icon";
+
 import { useOnlineI18n } from "../../i18n";
 import { ExtendedServicesButtons } from "../ExtendedServices/ExtendedServicesButtons";
 import { useNavigationBlockersBypass, useRoutes } from "../../navigation/Hooks";
@@ -81,6 +82,7 @@ import { ExternalLinkAltIcon } from "@patternfly/react-icons/dist/js/icons/exter
 // import { Toggle } from "@patternfly/react-core/dist/js/components/Dropdown/Toggle";
 import BellIcon from "@patternfly/react-icons/dist/js/icons/bell-icon";
 import { SettingsTabs } from "../../settings/SettingsModalBody";
+import { SettingsButton } from "../../settings/SettingsButton";
 
 export interface Props {
   editor: EmbeddedEditorRef | undefined;
@@ -282,25 +284,9 @@ export function EditorToolbarWithWorkspace(
 
   return (
     <>
-      <PageSection type={"nav"} variant={"light"} padding={{ default: "noPadding" }}>
-        {canSeeWorkspaceToolbar && (
-          <Flex
-            justifyContent={{ default: "justifyContentSpaceBetween" }}
-            flexWrap={{ default: "nowrap" }}
-            spaceItems={{ default: "spaceItemsMd" }}
-          >
-            <FlexItem style={{ minWidth: 0 }}>
-              <WorkspaceToolbar
-                workspace={props.workspace}
-                workspaceGitStatusPromise={props.workspaceGitStatusPromise}
-                currentWorkspaceFile={props.workspaceFile}
-                onDeletedWorkspaceFile={handleDeletedWorkspaceFile}
-              />
-            </FlexItem>
-            <VsCodeDropdownMenu workspace={props.workspace} />
-          </Flex>
-        )}
-      </PageSection>
+      {/*<PageSection type={"nav"} variant={"light"} padding={{ default: "noPadding" }}>*/}
+      {/*the flex is moved*/}
+      {/*</PageSection>*/}
       <PageSection type={"nav"} variant={"light"} style={{ paddingTop: 0, paddingBottom: 0 }}>
         <Flex
           justifyContent={{ default: "justifyContentSpaceBetween" }}
@@ -308,6 +294,25 @@ export function EditorToolbarWithWorkspace(
           flexWrap={{ default: "nowrap" }}
           gap={{ default: "gapMd" }}
         >
+          {/*moved from PageSection*/}
+          {canSeeWorkspaceToolbar && (
+            <Flex
+              justifyContent={{ default: "justifyContentSpaceBetween" }}
+              flexWrap={{ default: "nowrap" }}
+              spaceItems={{ default: "spaceItemsMd" }}
+            >
+              <FlexItem style={{ minWidth: 0 }}>
+                <WorkspaceToolbar
+                  workspace={props.workspace}
+                  workspaceGitStatusPromise={props.workspaceGitStatusPromise}
+                  currentWorkspaceFile={props.workspaceFile}
+                  onDeletedWorkspaceFile={handleDeletedWorkspaceFile}
+                />
+              </FlexItem>
+              <VsCodeDropdownMenu workspace={props.workspace} />
+            </Flex>
+          )}
+          {/*moved from PageSection*/}
           <FlexItem style={{ minWidth: 0 }}>
             <PageHeaderToolsItem visibility={{ default: "visible" }}>
               <Flex flexWrap={{ default: "nowrap" }} alignItems={{ default: "alignItemsCenter" }}>
@@ -324,7 +329,7 @@ export function EditorToolbarWithWorkspace(
                   workspaceFile={props.workspaceFile}
                   onDeletedWorkspaceFile={handleDeletedWorkspaceFile}
                 />
-                <FileStatus workspace={props.workspace} workspaceFile={props.workspaceFile} editor={props.editor} />
+                {/*<FileStatus workspace={props.workspace} workspaceFile={props.workspaceFile} editor={props.editor} />*/}
               </Flex>
             </PageHeaderToolsItem>
           </FlexItem>
@@ -332,68 +337,10 @@ export function EditorToolbarWithWorkspace(
             <Toolbar>
               <ToolbarContent style={{ paddingRight: 0 }}>
                 <ToolbarGroup>
-                  {props.workspaceFile.extension === "dmn" && !settings.editors.useLegacyDmnEditor && (
-                    <>
-                      <Dropdown
-                        toggle={
-                          <DropdownToggle
-                            onToggle={(_event, val) => setNewDmnEditorDropdownOpen(val)}
-                            id="new-dmn-editor-dropdown-toggle"
-                            toggleIndicator={null}
-                          >
-                            <Label color="cyan" variant={"outline"}>
-                              &nbsp;{`DNX Demo`}&nbsp;&nbsp;
-                              <CaretDownIcon />
-                            </Label>
-                          </DropdownToggle>
-                        }
-                        onSelect={() => setNewDmnEditorDropdownOpen(false)}
-                        isOpen={isNewDmnEditorDropdownOpen}
-                        isPlain={true}
-                        dropdownItems={[
-                          <DropdownItem key="give-feedback" description={"We'd love to hear from you!"}>
-                            <small>
-                              <a href={env.KIE_SANDBOX_FEEDBACK_URL} target="_blank">
-                                Give feedback&nbsp;
-                                <ExternalLinkAltIcon />
-                              </a>
-                            </small>
-                          </DropdownItem>,
-                          <DropdownItem
-                            key="switch-back"
-                            description="...and consider telling us why."
-                            onClick={() => {
-                              settingsDispatch.open(SettingsTabs.EDITORS);
-                              settingsDispatch.set((settings) => {
-                                settings.editors.useLegacyDmnEditor = true;
-                              });
-                            }}
-                          >
-                            <small>Switch back to the classic DMN Editor</small>
-                          </DropdownItem>,
-                        ]}
-                      />
-                    </>
-                  )}
-                  {props.workspaceFile.extension === "dmn" && settings.editors.useLegacyDmnEditor && (
-                    <>
-                      <Button
-                        icon={<BellIcon />}
-                        onClick={() => {
-                          settingsDispatch.set((settings) => {
-                            settings.editors.useLegacyDmnEditor = false;
-                          });
-                        }}
-                        variant={ButtonVariant.link}
-                      >
-                        Try the new DMN Editor!
-                      </Button>
-                    </>
-                  )}
+                  {props.workspaceFile.extension === "dmn" && !settings.editors.useLegacyDmnEditor && <></>}
+                  {props.workspaceFile.extension === "dmn" && settings.editors.useLegacyDmnEditor && <></>}
 
-                  <ToolbarItem>
-                    <AcceleratorsDropdown workspaceFile={props.workspaceFile} />
-                  </ToolbarItem>
+                  <ToolbarItem>{/*<AcceleratorsDropdown workspaceFile={props.workspaceFile} />*/}</ToolbarItem>
                   <ToolbarItem>
                     <ResponsiveDropdown
                       title={"Add file"}
@@ -404,11 +351,11 @@ export function EditorToolbarWithWorkspace(
                         <ResponsiveDropdownToggle
                           onToggle={() => setNewFileDropdownMenuOpen((prev) => !prev)}
                           // isPrimary={true}
-                          toggleVariant="primary"
+                          toggleVariant="default"
                           toggleIndicator={CaretDownIcon}
                         >
                           <PlusIcon />
-                          &nbsp;&nbsp;New file
+                          &nbsp;&nbsp;New
                         </ResponsiveDropdownToggle>
                       }
                     >

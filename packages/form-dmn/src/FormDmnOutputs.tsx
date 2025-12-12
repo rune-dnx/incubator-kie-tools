@@ -155,12 +155,9 @@ export function FormDmnOutputs({
               <div className={"kie-tools__dmn-form-result__evaluation"}>
                 <ExclamationCircleIcon />
                 {props.notificationsPanel ? (
-                  <div>
-                    <a onClick={onOpenEvaluationTab} className={"kogito--editor__dmn-form-result__evaluation-link"}>
-                      {i18n.result.evaluation.failed}
-                    </a>
-                    What else .... dx ...
-                  </div>
+                  <a onClick={onOpenEvaluationTab} className={"kogito--editor__dmn-form-result__evaluation-link"}>
+                    {i18n.result.evaluation.failed}
+                  </a>
                 ) : (
                   <p className={"kogito--editor__dmn-form-result__evaluation-link"}>{i18n.result.evaluation.failed}</p>
                 )}

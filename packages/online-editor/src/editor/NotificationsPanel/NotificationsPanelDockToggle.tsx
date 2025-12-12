@@ -25,6 +25,12 @@ import { Notification } from "@kie-tools-core/notifications/dist/api";
 import { EditorPageDockToggleItem } from "../EditorPageDockToggleItem";
 import { PanelId, useEditorDockContext } from "../EditorPageDockContextProvider";
 
+import { ExtendedServicesIcon } from "../../extendedServices/ExtendedServicesIcon";
+import { Toolbar, ToolbarContent } from "@patternfly/react-core/dist/js/components/Toolbar";
+import { ToolbarGroup, ToolbarItem } from "@patternfly/react-core/dist/js/components/Toolbar";
+import { SettingsButton } from "../../settings/SettingsButton";
+import { AccountsIcon } from "../../accounts/AccountsIcon";
+
 interface NotificationsWithPath {
   path: string;
   notifications: Notification[];
@@ -105,7 +111,7 @@ function NotificationsToggleItem(props: NotificationsToggleItemProps) {
   return (
     <ToggleGroupItem
       style={{
-        borderLeft: "solid 1px",
+        borderLeft: "solid 0.2px",
         borderRadius: 0,
         borderColor: "rgb(211, 211, 211)",
         padding: "1px",
@@ -119,17 +125,26 @@ function NotificationsToggleItem(props: NotificationsToggleItemProps) {
         }
       }}
       text={
-        <div style={{ display: "flex" }}>
-          <div style={{ paddingRight: "5px", width: "30px" }}>
-            <ExclamationCircleIcon />
+        <div className={"footer-icons"}>
+          <div>
+            <AccountsIcon />
           </div>
-          Problems
-          <div style={{ paddingLeft: "5px", width: "30px" }}>
-            {!props.isDisabled && (
-              <span id={"total-notifications"} onAnimationEnd={onAnimationEnd}>
-                {props.notificationsCount}
-              </span>
-            )}
+          <div>
+            <ExtendedServicesIcon />
+          </div>
+          <div>
+            <SettingsButton />
+          </div>
+          <div className={"footer-icons"}>
+            <ExclamationCircleIcon />
+            Problems
+            <div>
+              {!props.isDisabled && (
+                <span id={"total-notifications"} onAnimationEnd={onAnimationEnd}>
+                  {props.notificationsCount}
+                </span>
+              )}
+            </div>
           </div>
         </div>
       }
