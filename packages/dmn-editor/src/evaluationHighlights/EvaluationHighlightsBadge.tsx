@@ -38,7 +38,7 @@ export function EvaluationHighlightsBadge() {
             state.diagram.overlays.enableEvaluationHighlights = !state.diagram.overlays.enableEvaluationHighlights;
           });
         }}
-        title={i18n.evaluationHightlights}
+        // title={i18n.evaluationHightlights}
       >
         {i18n.evaluationHightlights}:{" "}
         {dmnEditorStoreApi.getState().diagram.overlays.enableEvaluationHighlights ? i18n.on : i18n.off}

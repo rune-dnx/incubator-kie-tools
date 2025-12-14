@@ -189,7 +189,7 @@ export const en: DmnEditorI18n = {
     empty: "<Empty>",
     input: "Input",
   },
-  evaluationHightlights: "Evaluation highlights",
+  evaluationHightlights: "Eval",
   on: "on",
   off: "off",
   externalNodes: {
